@@ -1,7 +1,7 @@
 ﻿
 namespace planner
 {
-    partial class formProjectEdit
+    partial class Form_Project_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@ namespace planner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 290);
+            this.ClientSize = new System.Drawing.Size(739, 349);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);

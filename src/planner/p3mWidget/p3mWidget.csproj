@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09CD5F69-A197-402B-A7FA-EDEC68DCA030}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>p3mWidget</RootNamespace>
+    <AssemblyName>p3mWidget</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_Task_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Task_Admin.Designer.cs">
+      <DependentUpon>Form_Task_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="p3mGantt_TaskInfo.cs" />
+    <Compile Include="p3mGantt_top.cs" />
+    <Compile Include="p3mGantt_TaskBar_byDay.cs" />
+    <Compile Include="p3mGantt_Calender.cs" />
+    <Compile Include="p3mGantt_Calender_byAuto.cs" />
+    <Compile Include="p3mGantt_Calender_byLayout.cs" />
+    <Compile Include="p3mGantt_Calender_byStyle.cs" />
+    <Compile Include="p3mGantt_Calender_byUnit.cs" />
+    <Compile Include="p3mGantt_Calender_byYear.cs" />
+    <Compile Include="p3mGantt_define.cs" />
+    <Compile Include="p3mGantt_draw_option.cs" />
+    <Compile Include="p3mGantt_Manager_Calender.cs" />
+    <Compile Include="p3mGantt_Manager_Task.cs" />
+    <Compile Include="p3mWidget_GanttChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="p3mWidget_GanttChart.Designer.cs">
+      <DependentUpon>p3mWidget_GanttChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="p3mWidget_Gantt_Layout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="p3mWidget_Gantt_Layout.Designer.cs">
+      <DependentUpon>p3mWidget_Gantt_Layout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_Task_Admin.resx">
+      <DependentUpon>Form_Task_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="p3mWidget_GanttChart.resx">
+      <DependentUpon>p3mWidget_GanttChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="p3mWidget_Gantt_Layout.resx">
+      <DependentUpon>p3mWidget_Gantt_Layout.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

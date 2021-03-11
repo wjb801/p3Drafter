@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace planner
 {
-    public partial class formProjectEdit : Form
+    public partial class Form_Project_Admin : Form
     {
         [DefaultValue(true)]
         public bool e_bMode_new { get; set; }  //当前新建
 
-        public formProjectEdit()
+        public Form_Project_Admin()
         {
             InitializeComponent();
 
